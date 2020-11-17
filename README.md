@@ -1,0 +1,1 @@
+A blog with articles regarding games of different genres. Any user can sign up and add articles.
