@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-  include SessionHelper
   
   def create
     user = User.find_by_name(user_session_params)
