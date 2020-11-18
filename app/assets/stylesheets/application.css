@@ -1,15 +1,85 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  margin-bottom: 5.5rem;
+  margin-top: 6.5rem;
+}
+
+li {
+  line-height: 1.5rem;
+  list-style-type: none;
+  text-align: center;
+}
+
+img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+h1,
+h2 {
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.vertical-center {
+  align-items: center;
+}
+
+.gray-links a {
+  color: #838080;
+}
+
+.orange-links a {
+  color: #ffa500;
+}
+
+.dark-orange-links a {
+  color: #ff5a00;
+}
+
+.gray-links a:hover {
+  color: #ff5a00;
+}
+
+.orange-links a:hover {
+  color: #ff5a00;
+}
+
+.dark-orange-links a:hover {
+  filter: brightness(200%);
+}
+
+.orange-text {
+  color: #ffa500;
+}
+
+.dark-orange-text {
+  color: #ff5a00;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.test {
+  border: red 1px solid;
+}
