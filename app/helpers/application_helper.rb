@@ -69,6 +69,7 @@ module ApplicationHelper
         end
     end
   end
+  
   def display_details(art)
     content_tag(:h1, @category.name, class: 'orange-text') + content_tag(:h2, art.title) +
       content_tag(:p, simple_format(art.text.truncate(140))) +
@@ -82,9 +83,9 @@ module ApplicationHelper
     if current_user
       vote = Vote.find_by(article: art, user: current_user)
       if vote
-        link_to('(^.^)b Click to Unvote', article_vote_path(id: vote.id, article_id: art.id), method: :delete)
+        link_to('Click to Unvote', article_vote_path(id: vote.id, article_id: art.id), method: :delete)
       else
-        link_to('(°-°) Click to Vote!', article_votes_path(article_id: art.id), method: :post)
+        link_to('Click to Vote!', article_votes_path(article_id: art.id), method: :post)
       end
     else
       link_to('Log in to vote', log_in_path)
