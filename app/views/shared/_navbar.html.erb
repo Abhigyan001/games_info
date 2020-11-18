@@ -1,0 +1,16 @@
+<header>
+  <nav class="gray-links">
+    <ul class="flex space-between">
+      <li class="logo">
+        <%= image_tag("", :alt => "logo") %>
+      </li>
+      <ul class="flex">
+        <li class= "orange-links"><%= link_to 'Home', root_path %></li>
+        
+      </ul>
+      <ul class="flex">
+        <%= session_controls %>
+      </ul>
+    </ul>
+  </nav>
+</header>

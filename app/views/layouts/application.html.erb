@@ -10,6 +10,11 @@
   </head>
 
   <body>
-    <%= yield %>
+   <%= render 'shared/navbar' %>
+    <%= display_propper_flash %>
+    <main>
+      <%= yield %>
+    </main>
+    <%= render 'shared/footer' %>
   </body>
 </html>
