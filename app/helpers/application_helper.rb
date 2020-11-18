@@ -69,4 +69,39 @@ module ApplicationHelper
         end
     end
   end
+  def display_details(art)
+    content_tag(:h1, @category.name, class: 'orange-text') + content_tag(:h2, art.title) +
+      content_tag(:p, simple_format(art.text.truncate(140))) +
+      content_tag(:span, "#{art.votes_count} votes - Your reaction: ") +
+      content_tag(:span, nil, class: 'orange-links') do
+        vote_toggle_btn(art)
+      end + content_tag(:br) + content_tag(:span, "Written by #{art.author.name.capitalize}")
+  end
+
+  def vote_toggle_btn(art)
+    if current_user
+      vote = Vote.find_by(article: art, user: current_user)
+      if vote
+        link_to('(^.^)b Click to Unvote', article_vote_path(id: vote.id, article_id: art.id), method: :delete)
+      else
+        link_to('(°-°) Click to Vote!', article_votes_path(article_id: art.id), method: :post)
+      end
+    else
+      link_to('Log in to vote', log_in_path)
+    end
+  end
+
+  def show_articles_by_cat(articles)
+    return if articles.nil?
+
+    content_tag(:div, nil, class: 'flex') do
+      articles.each_with_index do |art, ind|
+        concat link_to(
+          content_tag(:div, nil, class: 'details white-text') do
+            content_tag(:p, @categories.find(ind + 1).name) + (content_tag(:p, art.title) if art)
+          end + (display_photo(art) if art), '#', class: 'recent-article1'
+        )
+      end
+    end
+  end
 end
