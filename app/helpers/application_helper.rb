@@ -28,7 +28,7 @@ module ApplicationHelper
     if current_user
       content_tag(:li) do
         content_tag(:span) do
-          link_to "Write as #{current_user.name}", new_article_path
+          link_to "Create an Article, #{current_user.name}", new_article_path
         end
       end + content_tag(:li, ' | ') +
         content_tag(:li) do
@@ -83,9 +83,9 @@ module ApplicationHelper
     if current_user
       vote = Vote.find_by(article: art, user: current_user)
       if vote
-        link_to('(^.^)b Click to Unvote', article_vote_path(id: vote.id, article_id: art.id), method: :delete)
+        link_to('Unvote', article_vote_path(id: vote.id, article_id: art.id), method: :delete)
       else
-        link_to('(°-°) Click to Vote!', article_votes_path(article_id: art.id), method: :post)
+        link_to('Click to Vote!', article_votes_path(article_id: art.id), method: :post)
       end
     else
       link_to('Log in to vote', log_in_path)
