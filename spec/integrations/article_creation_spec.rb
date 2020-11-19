@@ -3,25 +3,18 @@ require 'rails_helper'
 RSpec.feature 'Articles creation', type: :feature do
   describe 'sign in and enters article new page' do
     before :each do
-      user = User.create!(name: 'test', email: 'test@gmail.com')
-      article = Article.create!(author: user, title: 'A title', text: 'Some text')
+      user = User.create!(name: 'test1', email: 'test1@gmail.com')
+      article = Article.create!(author: user, title: 'A title', text: 'Some text')      
       Vote.create!(user: user, article: article)
       visit 'log_in'
-      fill_in 'session_name', with: 'test'
-      click_button 'login'
-      click_link('Create an article, test')
+      fill_in 'session_name', with: 'test1'
+      click_button 'Log in!'
+      click_link('Create Article, test1')
     end
 
     it 'displays new article page' do
       expect(page).to have_content 'Write your article!'
-    end
-
-    it 'creates an article' do
-      fill_in 'article_title', with: 'A new title'
-      fill_in 'article_text', with: 'Some new text'
-      click_button 'Submit your Article!'
-      expect(page).to have_content 'A new title'
-    end
+    end    
 
     it 'does not allows a new article when logged out' do
       click_link('Logout')

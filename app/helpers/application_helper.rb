@@ -28,7 +28,7 @@ module ApplicationHelper
     if current_user
       content_tag(:li) do
         content_tag(:span) do
-          link_to "Create an Article, #{current_user.name}", new_article_path
+          link_to "Create Article, #{current_user.name}", new_article_path
         end
       end + content_tag(:li, ' | ') +
         content_tag(:li) do

@@ -3,13 +3,13 @@ require 'rails_helper'
 RSpec.feature 'Votes creation', type: :feature do
   describe 'sign in and enters categories page' do
     before :each do
-      user = User.create!(name: 'test', email: 'test@gmail.com')
+      user = User.create!(name: 'test1',email: 'test1@gmail.com')
       article = Article.create!(author: user, title: 'A title', text: 'Some text')
       Vote.create!(user: user, article: article)
       visit 'log_in'
-      fill_in 'session_name', with: 'test'
-      click_button 'login'
-      click_link('ACTION')
+      fill_in 'session_name', with: 'test1'
+      click_button 'Log in!'
+      visit 'categories/53'
     end
 
     it 'displays show categories page' do
@@ -29,7 +29,7 @@ RSpec.feature 'Votes creation', type: :feature do
 
     it 'not allows votation when logged out' do
       click_link('Logout')
-      click_link('SPORTS', match: :first)
+      click_link('Home', match: :first)
       expect(page).to_not have_content 'Click to vote!'
     end
   end

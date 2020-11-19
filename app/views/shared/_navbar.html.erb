@@ -6,7 +6,7 @@
       </li>
       <ul class="flex">
         <li class= "orange-links"><%= link_to 'Home', root_path %></li>
-        <li><%= link_to Category.find(53).name, category_path(Category.find(53)) %></li>
+        <li><%= link_to Category.first.name, category_path(Category.first) %></li>
         <li><%= link_to Category.find(54).name, category_path(Category.find(54)) %></li>
         <li><%= link_to Category.find(55).name, category_path(Category.find(55)) %></li>
         <li><%= link_to Category.find(56).name, category_path(Category.find(56)) %></li>
