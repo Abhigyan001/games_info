@@ -1,12 +1,22 @@
 .homepage {
+  
   img {
     filter: brightness(70%);
-    z-index: 0;
+    z-index: 0;   
+  }
+
+  h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 25px;
   }
 
   .details {
     position: absolute;
-    z-index: 1;
+    z-index: 1;    
   }
 }
 
@@ -14,8 +24,8 @@
   display: block;
   position: relative;
   width: 100%;
-  height: calc(70vh - 8.4rem); /* 70% available screen */
-
+  height: 60vh; 
+  margin-top: -2%; 
   .details {
     bottom: 0;
     padding: 0 1.5rem;
@@ -26,7 +36,7 @@
   position: relative;
   display: block;
   width: 25%;
-  height: calc(30vh - 3.6rem); /* 30% available screen */
+  height: 27vh; 
   .details {
     height: 100%;
     display: flex;
@@ -43,7 +53,7 @@
     }
 
     p:first-of-type {
-      border-bottom: #ffa500 2px solid;
+      border-bottom: #ee732c 2px solid;
     }
   }
 }
@@ -51,5 +61,5 @@
 .recent-article2 {
   display: block;
   width: 25%;
-  height: calc(30vh - 3.6rem); /* 30% available screen */
+  height: calc(40vh - 3.6rem); 
 }

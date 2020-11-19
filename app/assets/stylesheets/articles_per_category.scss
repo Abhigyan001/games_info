@@ -2,10 +2,11 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-left: 1%;
 
   h1 {
     display: inline-block;
-    border-bottom: #ffa500 2px solid;
+    border-bottom: #f39428 2px solid;
   }
 
   h2 {
@@ -22,8 +23,13 @@
 }
 
 .photo {
-  background-color: orange;
+  background-color: rgba(228, 188, 114, 0.733);
   height: calc(50vh - 6rem);
+  border-radius: 20px;
+  img {
+    border-radius: 20px;
+  }
+  margin: 1%;
 }
 
 .details {

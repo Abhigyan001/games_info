@@ -31,7 +31,7 @@ nav {
   border-bottom: #838080 4px solid;
   width: 100%;
   background-color: #fff;
-  height: 8%;
+  height: 7.7%;
   z-index: 2;
 
   li {
@@ -40,18 +40,20 @@ nav {
   }
 
   .logo {
-    height: 5.5rem;
-    border-bottom: #ff2500 4px solid;
-    margin-bottom: calc(-0.5rem - 4px);
+    height: 6%;
+    width: 6%;
+    border-radius: 10px;
+    margin-left:-2%;
+    margin-top:-0.4%;
   }
 }
 
 footer {
   position: fixed;
   bottom: 0;
-  height: 5%;
+  height: 6%;
   width: 100%;
-  background-color: #3f3636be;
-  font-size: 1.2rem;
-  z-index: 2;
+  background-color: #424040f5;
+  font-size: 1.3rem;
+  z-index: 3;
 }
