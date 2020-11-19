@@ -3,13 +3,13 @@ require 'rails_helper'
 RSpec.feature 'Articles creation', type: :feature do
   describe 'sign in and enters article new page' do
     before :each do
-      user = User.create!(name: 'test')
+      user = User.create!(name: 'test', email: 'test@gmail.com')
       article = Article.create!(author: user, title: 'A title', text: 'Some text')
       Vote.create!(user: user, article: article)
       visit 'log_in'
       fill_in 'session_name', with: 'test'
-      click_button 'commit'
-      click_link('Write as test')
+      click_button 'login'
+      click_link('Create an article, test')
     end
 
     it 'displays new article page' do
@@ -19,7 +19,7 @@ RSpec.feature 'Articles creation', type: :feature do
     it 'creates an article' do
       fill_in 'article_title', with: 'A new title'
       fill_in 'article_text', with: 'Some new text'
-      click_button 'commit'
+      click_button 'Submit your Article!'
       expect(page).to have_content 'A new title'
     end
 

@@ -7,25 +7,11 @@ RSpec.feature 'Categories', type: :feature do
     end
 
     it 'displays homepage' do
-      expect(page).to have_content 'Rogers cup 2020'
+      expect(page).to have_content 'Simulation'
     end
 
     it 'does not display show categories page' do
       expect(page).to_not have_content 'Written by'
     end
-  end
-
-  describe 'show categories page' do
-    before :each do
-      visit 'categories/2'
-    end
-
-    it 'does not display homepage' do
-      expect(page).to_not have_content 'Rogers cup 2020'
-    end
-
-    it 'displays show categories page' do
-      expect(page).to have_content 'Written by'
-    end
-  end
+  end  
 end

@@ -2,7 +2,7 @@
   <nav class="gray-links">
     <ul class="flex space-between">
       <li class="logo">
-        <%= image_tag("PC.png", :alt => "logo") %>
+      <a href="<%=root_path %>"><%= image_tag("PC.png", :alt => "logo") %></a>        
       </li>
       <ul class="flex">
         <li class= "orange-links"><%= link_to 'Home', root_path %></li>
@@ -12,7 +12,7 @@
         <li><%= link_to Category.find(56).name, category_path(Category.find(56)) %></li>
       </ul>
       <ul class="flex">
-        <%= session_controls %>
+        <%= login_controls %>
       </ul>
     </ul>
   </nav>

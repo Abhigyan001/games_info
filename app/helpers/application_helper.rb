@@ -1,14 +1,4 @@
 module ApplicationHelper
-  def display_propper_flash
-    if flash[:notice]
-      content_tag(:div, flash[:notice], class: 'flash notice', align: 'center')
-    elsif flash[:success]
-      content_tag(:div, flash[:success], class: 'flash success', align: 'center')
-    elsif flash[:danger]
-      content_tag(:div, flash[:danger], class: 'flash danger', align: 'center')
-    end
-  end
-
   def errors_message(object)
     return unless object.errors.any?
 
@@ -23,8 +13,18 @@ module ApplicationHelper
         end
     end
   end
+  
+  def display_flash
+    if flash[:notice]
+      content_tag(:div, flash[:notice], class: 'flash notice', align: 'center')
+    elsif flash[:success]
+      content_tag(:div, flash[:success], class: 'flash success', align: 'center')
+    elsif flash[:danger]
+      content_tag(:div, flash[:danger], class: 'flash danger', align: 'center')
+    end
+  end  
 
-  def session_controls
+  def login_controls
     if current_user
       content_tag(:li) do
         content_tag(:span) do
@@ -44,7 +44,7 @@ module ApplicationHelper
     end
   end
 
-  def display_4articles(art, ind)
+  def show_articles(art, ind)
     if ind < 2
       content_tag(:div, nil, class: 'photo') do
         display_photo(art)
@@ -79,20 +79,7 @@ module ApplicationHelper
       end + content_tag(:br) + content_tag(:span, "Written by #{art.author.name.capitalize}")
   end
 
-  def vote_toggle_btn(art)
-    if current_user
-      vote = Vote.find_by(article: art, user: current_user)
-      if vote
-        link_to('Unvote', article_vote_path(id: vote.id, article_id: art.id), method: :delete)
-      else
-        link_to('Click to Vote!', article_votes_path(article_id: art.id), method: :post)
-      end
-    else
-      link_to('Log in to vote', log_in_path)
-    end
-  end
-
-  def show_articles_by_cat(articles)
+  def articles_by_cat(articles)
     return if articles.nil?
 
     content_tag(:div, nil, class: 'flex') do
@@ -105,4 +92,17 @@ module ApplicationHelper
       end
     end
   end
+
+  def vote_toggle_btn(art)
+    if current_user
+      vote = Vote.find_by(article: art, user: current_user)
+      if vote
+        link_to('Unvote', article_vote_path(id: vote.id, article_id: art.id), method: :delete)
+      else
+        link_to('Click to Vote!', article_votes_path(article_id: art.id), method: :post)
+      end
+    else
+      link_to('Log in to vote', log_in_path)
+    end
+  end  
 end
