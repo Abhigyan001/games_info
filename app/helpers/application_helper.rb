@@ -46,7 +46,7 @@ module ApplicationHelper
     if art.image.attached?
       image_tag(art.image)
     else
-      image_tag("https://source.unsplash.com/800x600/?{tennis},{#{art.title}}")
+      image_tag("https://source.unsplash.com/500x500/?{videogame},{#{art.title}}")
     end
   end
 

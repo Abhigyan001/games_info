@@ -1,41 +1,33 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 sim = Category.create(name: "Simulation", priority: 1)
-sports = Category.create(name: "Sports", priority: 2)
-action = Category.create(name: "Action", priority: 3)
-open = Category.create(name: "Open World", priority: 4)
+action = Category.create(name: "Action", priority: 2)
+sports = Category.create(name: "Sports", priority: 3)
+rpg = Category.create(name: "RPG", priority: 4)
 admin = User.create(name: "admin")
 user = User.create(name: "user")
-sim.articles.create(author: admin, title: "Rogers Cup 2020 Suspended", text: "Due to pandemic, this tournament won't be held. This tournament was originally planned to take place in Toronto, Canada in the second week of August. And the prize money was of $5,951,605 in hardy have used their skill, fitness and determination to create ATP Tour history.
 
-In the latest prize draw in support of the ATP Coach Programme, all you will need is a slice of luck to take home a dream prize. The historic group, which owns a combined 313 sim-level singles trophies, each donated a signed racquet to create a framed collection of four racquets for one lucky entrant to win. ")
-open.articles.create(author: admin, title: "Free Live Streams and Resportss: The New 'Challenger TV'", text: "Fans of the ATP Challenger Tour have never had it so good. Free live streams of every match from every tournament have brought you closer-surface courts")
-sim.articles.create(author: admin, title: "US Open 2020 without presence of fans", text: "For the first time in its history, this year's US Open will be sportsed without the presence of fans. This tournament will take place in Ney York, U.S.A at the end of August in hard-surface courts")
-sim.articles.create(author: admin, title: "Generali Open 2020 shifted dates", text: "The new dates for this tournament have shifted to 8-13 September due to COVID-19 pandemic. This tournament will take place in Kitzbuhel, Australia on clay-surface courts with a prize money of €542,695")
-sim.articles.create(author: admin, title: "Roland Garros 2020 shifted dates", text: "The new dates for this tournament have shifted to 27 September - 11 October due to COVID-19 pandemic. This tournament has always been help in Paris, France on clay courts and this year it will not be an exception")
-sports.articles.create(author: admin, title: "Roger Federer facts", text: "For his 39th birthday ATP Tour shared these facts about the 4rth Ranked Tennis sportser: Federer has spent a record 310 weeks atop the FedEx ATP Rankings, finishing atop the year-end standings five times. Tournaments at which Federer has won 10 titles. He has done so at the Swiss Indoors Basel and the NOVENTI OPEN in Halle. Won three Grand Slams in a calendar year on three occasions, in 2004 and 2006-07. Federer is the only sportser to accomplish that feat. Number of children Federer has with his wife, Mirka Federer. They have two sets of twins: Myla & Charlene (born 23 July 2009) and Leo & Lenny (born 6 May 2014)")
-sports.articles.create(author: admin, title: "Novak Djokovic is number 1", text: "If you want to know what it takes to beat the number 1 sportser in the world, you have to check out Craig O'Shannessy article titled Think you can beat Djokovic? Here's What it will take")
-sports.articles.create(author: admin, title: "Jannik Sinner's Background", text: "Learn about the youngest sportser ranked in the Top 100 sportsers of the world. This 18 year old italian stunned the field at the 2019 next gen ATP finals. He is a former Junior Skiing Champion. He owns the heaviest backhand on the ATP sim. And he's raising funds for COVID-19 relief. Isn't he inspiring?")
-sports.articles.create(author: admin, title: "Rafael Nadal still on the top", text: "Number 2 ranked sportser Rafael Nadal and number 1 ranked sportser Novak Djokovic rivalry has developed into one of the classic rivalries in tennis history. Still, in their most even match in 2008 Hamburg semi-finals Nadal ultimately triumph 7-5, 2-6, 6-2 in a three-hour, three-minute marathon. And then Nadal went on to beat Roger Federer in the championship match, avenging a loss against the Swiss in the 2007 Hamburg final.")
-action.articles.create(author: admin, title: "Begginers: How to serve", text: "The movements you need to know are: the serve, forehand groundstroke, backhand groundstroke, forehand volley, backhand volley, and the overhead smash. Lets start with the serve: Before starting, make sure you’re standing behind the baseline. Next place your feet in a side on stance where if you drew an arrow between the tips of your feet it’d point towards your opponent (this may feel a little strange at first but will help with power). Finally, grip the racket in your dominant hand using a continental grip (like you’d hold a hammer) and hold the tennis ball in your non-dominant hand. Now you’re ready to start serving.")
-action.articles.create(author: admin, title: "Begginers: What is a forehand groundstroke", text: "A tennis forehand is one of the two types of groundstrokes. It refers to a shot performed from the baseline with the racket held in your dominant hand. For a right-handed sportser the forehand swing starts on the right side of your body, continues forward and across your body as you contact the ball (at this point the palm of your hand is turned away from your body), and finishes on the left side of your body.")
-action.articles.create(author: admin, title: "Begginers: What is a backhand groundstroke", text: "A backhand in tennis is the open of the two types of groundstroke. It can be a one-handed and/or two-handed stroke. Like the forehand, the basic swing pattern starts on one side of your body, moves forward and across, and ends on the open side of your body. But unlike the forehand, the backhand is hit with the back of your dominant hand facing the direction of the stroke")
-action.articles.create(author: admin, title: "Begginers: How to hit a two-handed backhand", text: "A two-handed backhand is performed with your dominant hand holding the bottom of the racquet grip and your non-dominant hand placed above as you make contact with the ball. The addition of the second arm and hand gives the two-handed backhand greater control and power at the cost of reach. Study the image sequence of Andre Agassi and follow along step-by step below.")
-open.articles.create(author: admin, title: "Anopen article", text: "This is a fill in article created to have a complete")
-open.articles.create(author: admin, title: "Win A Signed 'Big Four' Racquet Collection!", text: "Funds raised will support members of the ATP Coach Programme in most need due to the COVID-19 pandemic. For more than a decade, the ‘Big Four’ of Roger Federer, Rafael Nadal, Novak Djokovic and Andy Murra to the action from around the world.
+sim.articles.create(author: admin, title: "MICROSOFT FLIGHT SIMULATOR 2020", text: "Microsoft Flight Simulator (often abbreviated as MSFS or FS) is a series of amateur flight simulator programs for Microsoft Windows operating systems, and earlier for MS-DOS and Classic Mac OS. It is one of the longest-running, best-known, and most comprehensive home flight simulator programs on the market.")
 
-Now, it gets even better.
+rpg.articles.create(author: admin, title: "NEVERWINTER", text: "Across the main campaign, dungeons, and raids you’ll get to embark on some truly memorable adventuring, whether that’s finding a disgruntled demon somewhere to rest where they won’t be disturbed by doomguides, or taking part in a 12-part campaign to defeat Baphomet. Pretty much any key location you’ve heard of in the Forgotten Realms, from Ravenloft to Chult, and all content in Neverwinter, old and new, is free, just be ready for a grind when it comes to some items.")
 
-Fire up a stream whenever you want with the new 'Challenger TV'. Want to follow the path of one of the ATP's future stars, but unable to watch the action live? Not to worry. Catch up on every encounter with thousands of matches available for free and on demand.")
-open.articles.create(author: admin, title: "Truist Atlanta Open Feeding Frontline Healthcare Workers", text: "ATP 250 is partnering to provide a food truck for hospital workers on Tuesday and Wednesday.
+sim.articles.create(author: admin, title: "HARD TRUCK 2", text: "As truck games go, Hard Truck 2 tries to tick all of the boxes. There’s plenty of management and sim elements when it comes to managing your jobs, running cargo, and hiring an ever-growing workforce, but there’s also a lot of racing and aggressive driving – think of it as Euro Truck Simulator 2 meets GTA 5.")
 
-The Truist Atlanta Open announced that it is joining with partner, CIGNA, to feed some of Metro Atlanta’s frontline healthcare workers at Northside Hospital Cherokee on behalf of GF Sports, the Truist Atlanta Open, CIGNA and Waffle House.
+rpg.articles.create(author: admin, title: " THE WITCHER 3: WILD HUNT
+", text: "Every quest is an opportunity to not just learn more about the war-ravaged lands and the gamut of its inhabitants, but to also be drawn into the knotty drama. A simple contract, such as directing series protagonist Geralt to slaughter a monster (there are many such quests, and for the first time it actually feels like we’re getting to see Geralt doing his actual job), can transform into an elaborate series of consequence-laden stories that span several hours, closing and opening doors as it hurtles towards a satisfying conclusion.")
 
-The Waffle House Food Truck will visit Northside Hospital Cherokee on Tuesday, 14 April from 10am-2pm to feed the daytime shift and on Wednesday, 15 April, from 8pm-12am for the night shift.")
+
+
+action.articles.create(author: admin, title: " Mortal Kombat X
+", text: " Its exotic gaming mode includes 3v3 KOMBAT, Multi-Player Fraction Wars, and Weekly challenges, that hold you to this game, for a pretty long period. You can enjoy this game with your team as it offers you a multiplayer battleground.")
+
+
+action.articles.create(author: admin, title: " Batman: Arkham Knight
+", text: " Batman has traveled from movies, comics to games, and has managed to rule the market for decades. Be a part of it and enter into an action-packed adventurous journey to unveil the hidden perks of this game.
+Batman: Arkham Knight gaming mode includes Single-player, Challenge, and Online leadership board. So, get along with it and begin your gaming journey on various platforms that include PlayStation 4, Xbox One, and PC.
+")
+
+sports.articles.create(author: admin, title: "Football Manager 2020", text: " SEGA's Football Manager series is an enigma to many outside observers, but its seemingly niche appeal has grown into a borderline obsession for a large, passionate fan base. This soccer simulation is an insanely detailed, text-heavy simulation of the world's most popular sport, wherein you take on the role of club manager overseeing player transfers, on-field tactics, staff instructions, and everything in between in a bid to lead your club to glory.")
+
+sports.articles.create(author: admin, title: "Mutant Football League", text: " Mutant Football League literally plays by that rule set by pitting skeletons, robots, orcs, aliens, and mutated humans against each other in not-so-friendly gridiron contests featuring landmines and cheat plays. Mutant Football League is definitely worth playing, and not because it's the rare American football PC game that isn't Madden NFL; it's legitimately good, despite some annoying dirty trick plays.")
+
 Vote.create(user: user, article: Article.first)
+
