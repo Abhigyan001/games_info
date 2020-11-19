@@ -24,6 +24,26 @@ module ApplicationHelper
     end
   end
 
+  def session_controls
+    if current_user
+      content_tag(:li) do
+        content_tag(:span) do
+          link_to "Write as #{current_user.name}", new_article_path
+        end
+      end + content_tag(:li, ' | ') +
+        content_tag(:li) do
+          link_to 'Logout', log_out_path, method: :delete
+        end
+    else
+      content_tag(:li) do
+        link_to 'Login', log_in_path
+      end + content_tag(:li, ' | ') +
+        content_tag(:li) do
+          link_to 'Register', sign_up_path
+        end
+    end
+  end
+
   def display_4articles(art, ind)
     if ind < 2
       content_tag(:div, nil, class: 'photo') do
@@ -50,26 +70,6 @@ module ApplicationHelper
     end
   end
 
-  def session_controls
-    if current_user
-      content_tag(:li) do
-        content_tag(:span) do
-          link_to "#{current_user.name}", new_article_path
-        end
-      end + content_tag(:li, ' | ') +
-        content_tag(:li) do
-          link_to 'Logout', log_out_path, method: :delete
-        end
-    else
-      content_tag(:li) do
-        link_to 'Login', log_in_path
-      end + content_tag(:li, ' | ') +
-        content_tag(:li) do
-          link_to 'Register', sign_up_path
-        end
-    end
-  end
-  
   def display_details(art)
     content_tag(:h1, @category.name, class: 'orange-text') + content_tag(:h2, art.title) +
       content_tag(:p, simple_format(art.text.truncate(140))) +
@@ -83,9 +83,9 @@ module ApplicationHelper
     if current_user
       vote = Vote.find_by(article: art, user: current_user)
       if vote
-        link_to('Click to Unvote', article_vote_path(id: vote.id, article_id: art.id), method: :delete)
+        link_to('(^.^)b Click to Unvote', article_vote_path(id: vote.id, article_id: art.id), method: :delete)
       else
-        link_to('Click to Vote!', article_votes_path(article_id: art.id), method: :post)
+        link_to('(°-°) Click to Vote!', article_votes_path(article_id: art.id), method: :post)
       end
     else
       link_to('Log in to vote', log_in_path)
@@ -99,7 +99,7 @@ module ApplicationHelper
       articles.each_with_index do |art, ind|
         concat link_to(
           content_tag(:div, nil, class: 'details white-text') do
-            content_tag(:p, @categories.find(ind + 1).name) + (content_tag(:p, art.title) if art)
+            content_tag(:p, @categories.find(ind + 53).name) + (content_tag(:p, art.title) if art)
           end + (display_photo(art) if art), '#', class: 'recent-article1'
         )
       end

@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-    def index
+  def index
     @categories = Category.includes(:articles).all
     articles = Article.all
     @most_popular = articles.most_popular

@@ -2,8 +2,8 @@ sim = Category.create(name: "Simulation", priority: 1)
 action = Category.create(name: "Action", priority: 2)
 sports = Category.create(name: "Sports", priority: 3)
 rpg = Category.create(name: "RPG", priority: 4)
-admin = User.create(name: "admin")
-user = User.create(name: "user")
+admin = User.create(name: "admin", email: "admin@gmail.com")
+user = User.create(name: "user", email: "user@gmail.com")
 
 sim.articles.create(author: admin, title: "MICROSOFT FLIGHT SIMULATOR 2020", text: "Microsoft Flight Simulator (often abbreviated as MSFS or FS) is a series of amateur flight simulator programs for Microsoft Windows operating systems, and earlier for MS-DOS and Classic Mac OS. It is one of the longest-running, best-known, and most comprehensive home flight simulator programs on the market.")
 
@@ -16,18 +16,18 @@ rpg.articles.create(author: admin, title: " THE WITCHER 3: WILD HUNT
 
 
 
-action.articles.create(author: admin, title: " Mortal Kombat X
+action.articles.create(author: user, title: " Mortal Kombat X
 ", text: " Its exotic gaming mode includes 3v3 KOMBAT, Multi-Player Fraction Wars, and Weekly challenges, that hold you to this game, for a pretty long period. You can enjoy this game with your team as it offers you a multiplayer battleground.")
 
 
-action.articles.create(author: admin, title: " Batman: Arkham Knight
+action.articles.create(author: user, title: " Batman: Arkham Knight
 ", text: " Batman has traveled from movies, comics to games, and has managed to rule the market for decades. Be a part of it and enter into an action-packed adventurous journey to unveil the hidden perks of this game.
 Batman: Arkham Knight gaming mode includes Single-player, Challenge, and Online leadership board. So, get along with it and begin your gaming journey on various platforms that include PlayStation 4, Xbox One, and PC.
 ")
 
-sports.articles.create(author: admin, title: "Football Manager 2020", text: " SEGA's Football Manager series is an enigma to many outside observers, but its seemingly niche appeal has grown into a borderline obsession for a large, passionate fan base. This soccer simulation is an insanely detailed, text-heavy simulation of the world's most popular sport, wherein you take on the role of club manager overseeing player transfers, on-field tactics, staff instructions, and everything in between in a bid to lead your club to glory.")
+sports.articles.create(author: user, title: "Football Manager 2020", text: " SEGA's Football Manager series is an enigma to many outside observers, but its seemingly niche appeal has grown into a borderline obsession for a large, passionate fan base. This soccer simulation is an insanely detailed, text-heavy simulation of the world's most popular sport, wherein you take on the role of club manager overseeing player transfers, on-field tactics, staff instructions, and everything in between in a bid to lead your club to glory.")
 
-sports.articles.create(author: admin, title: "Mutant Football League", text: " Mutant Football League literally plays by that rule set by pitting skeletons, robots, orcs, aliens, and mutated humans against each other in not-so-friendly gridiron contests featuring landmines and cheat plays. Mutant Football League is definitely worth playing, and not because it's the rare American football PC game that isn't Madden NFL; it's legitimately good, despite some annoying dirty trick plays.")
+sports.articles.create(author: user, title: "Mutant Football League", text: " Mutant Football League literally plays by that rule set by pitting skeletons, robots, orcs, aliens, and mutated humans against each other in not-so-friendly gridiron contests featuring landmines and cheat plays. Mutant Football League is definitely worth playing, and not because it's the rare American football PC game that isn't Madden NFL; it's legitimately good, despite some annoying dirty trick plays.")
 
 Vote.create(user: user, article: Article.first)
 
