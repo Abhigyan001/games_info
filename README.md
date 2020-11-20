@@ -18,8 +18,8 @@ This project has the basic features of the article posting websites.
 - In the homepage of the project, user can see the most popular article (according to votes).
 - User can also see the most recent article for each category.
 - User can click on the category link in navbar to see all the articles of that category in the category page.
-- On the category page, user can click on article to see the full content of the article.
-- If the user is not logged he/she can see the articles but not create one or vote.
+- On the category page, user can see the full content of each article.
+- If the user is not logged he/she can see the articles but cannot create one or vote.
 - User can vote only one time for each article.
 - Users and articles have many votes.
 - A vote belongs to a user and an article.
