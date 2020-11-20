@@ -8,9 +8,8 @@ class UsersController < ApplicationController
     @user.name.downcase!
 
     if @user.save
-      session[:user_id] = @user.id
       flash[:success] = 'User created succesfully'
-      redirect_to root_path
+      redirect_to log_in_path
     else
       flash.now[:danger] = 'Something went wrong, please check the errors'
       render :new
@@ -20,6 +19,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name)
+    params.require(:user).permit(:name, :email)
   end
 end

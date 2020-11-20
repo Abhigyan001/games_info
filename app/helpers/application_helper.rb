@@ -13,7 +13,7 @@ module ApplicationHelper
         end
     end
   end
-  
+
   def display_flash
     if flash[:notice]
       content_tag(:div, flash[:notice], class: 'flash notice', align: 'center')
@@ -22,7 +22,7 @@ module ApplicationHelper
     elsif flash[:danger]
       content_tag(:div, flash[:danger], class: 'flash danger', align: 'center')
     end
-  end  
+  end
 
   def login_controls
     if current_user
@@ -72,7 +72,7 @@ module ApplicationHelper
 
   def display_details(art)
     content_tag(:h1, @category.name, class: 'orange-text') + content_tag(:h2, art.title) +
-      content_tag(:p, simple_format(art.text.truncate(140))) +
+      content_tag(:p, simple_format(art.text.truncate(14_000))) +
       content_tag(:span, "#{art.votes_count} votes - Your reaction: ") +
       content_tag(:span, nil, class: 'orange-links') do
         vote_toggle_btn(art)
@@ -86,7 +86,7 @@ module ApplicationHelper
       articles.each_with_index do |art, ind|
         concat link_to(
           content_tag(:div, nil, class: 'details white-text') do
-            content_tag(:p, @categories.find(ind + 53).name) + (content_tag(:p, art.title) if art)
+            content_tag(:p, @categories.find(ind + 1).name) + (content_tag(:p, art.title) if art)
           end + (display_photo(art) if art), '#', class: 'recent-article1'
         )
       end
@@ -104,5 +104,5 @@ module ApplicationHelper
     else
       link_to('Log in to vote', log_in_path)
     end
-  end  
+  end
 end

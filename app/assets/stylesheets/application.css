@@ -14,7 +14,6 @@
  *= require_self
  */
 
-
 a {
   text-decoration: none;
 }
@@ -24,6 +23,7 @@ body {
   margin: 0;
   margin-bottom: 5.5rem;
   margin-top: 6.5rem;
+  background-color: rgba(223, 103, 99, 0.479);
 }
 
 li {
@@ -56,7 +56,7 @@ img {
 }
 
 .orange-links a {
-  color: #ffa500;
+  color: #f30;
 }
 
 .dark-orange-links a {
@@ -76,12 +76,11 @@ img {
 }
 
 .orange-text {
-  color: #ffa500;
+  color: #ee5112;
 }
 
 .dark-orange-text {
   color: #ff5a00;
-  
 }
 
 .white-text {
@@ -94,4 +93,16 @@ img {
 
 .test {
   border: red 1px solid;
+}
+
+.random {
+  width: 20%;
+  height: 20%;
+  margin: 0 auto;
+}
+
+.article12 h1,
+p {
+  text-align: left;
+  margin: 2% 1%;
 }

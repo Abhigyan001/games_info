@@ -3,13 +3,13 @@ require 'rails_helper'
 RSpec.feature 'Votes creation', type: :feature do
   describe 'sign in and enters categories page' do
     before :each do
-      user = User.create!(name: 'test1',email: 'test1@gmail.com')
+      user = User.create!(name: 'test1', email: 'test1@gmail.com')
       article = Article.create!(author: user, title: 'A title', text: 'Some text')
       Vote.create!(user: user, article: article)
       visit 'log_in'
       fill_in 'session_name', with: 'test1'
       click_button 'Log in!'
-      visit 'categories/53'
+      visit 'categories/1'
     end
 
     it 'displays show categories page' do

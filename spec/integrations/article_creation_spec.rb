@@ -4,7 +4,7 @@ RSpec.feature 'Articles creation', type: :feature do
   describe 'sign in and enters article new page' do
     before :each do
       user = User.create!(name: 'test1', email: 'test1@gmail.com')
-      article = Article.create!(author: user, title: 'A title', text: 'Some text')      
+      article = Article.create!(author: user, title: 'A title', text: 'Some text')
       Vote.create!(user: user, article: article)
       visit 'log_in'
       fill_in 'session_name', with: 'test1'
@@ -14,7 +14,7 @@ RSpec.feature 'Articles creation', type: :feature do
 
     it 'displays new article page' do
       expect(page).to have_content 'Write your article!'
-    end    
+    end
 
     it 'does not allows a new article when logged out' do
       click_link('Logout')
