@@ -9,7 +9,7 @@ This project has the basic features of the article posting websites.
 ![screenshot](./app/assets/images/ss.png)
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://gamearticles.herokuapp.com/)
 
 # What it does
 
