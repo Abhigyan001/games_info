@@ -6,7 +6,7 @@ Ruby on Rails Microverse Capstone Project By Abhigyan Mahanta.
 
 This project has the basic features of the article posting websites.
 
-![screenshot](./app/assets/images/ss.png)
+![screenshot](./app/assets/images/ss.PNG)
 ## Live Demo
 
 [Live Demo Link](https://gamearticles.herokuapp.com/)
