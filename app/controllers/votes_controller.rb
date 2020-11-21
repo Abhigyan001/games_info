@@ -1,6 +1,6 @@
 class VotesController < ApplicationController
   def create
-    @vote = current_user.votes.new(article_id: params[:article_id])
+    @vote = current_user.votes.new(vote_params)
     if @vote.save
       redirect_back fallback_location: '/', notice: 'You voted for an article.'
     else
@@ -16,5 +16,11 @@ class VotesController < ApplicationController
     else
       redirect_back fallback_location: '/', alert: 'There was a problem, please try again.'
     end
+  end
+  
+  private
+
+  def vote_params
+    params.permit(:article_id)
   end
 end

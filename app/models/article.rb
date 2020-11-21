@@ -5,7 +5,7 @@ class Article < ApplicationRecord
   has_one_attached :image
 
   validates :title, presence: true, uniqueness: { case_sensitive: false }, length: { maximum: 60 }
-  validates :text, presence: true
+  validates :text, presence: true, length: { minimum: 3, maximum: 14000 }
   validates :image, allow_blank: true, format: {
   with: %r{\.gif|jpg|png}i,
   message: 'must be a url for gif, jpg, or png image.'

@@ -3,5 +3,5 @@ class User < ApplicationRecord
   has_many :votes, dependent: :destroy
 
   validates :name, presence: true, uniqueness: { case_sensitive: false }, length: { minimum: 3, maximum: 20 }
-  validates :name, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true, length: { minimum: 3, maximum: 20 }
 end

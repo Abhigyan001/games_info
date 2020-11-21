@@ -66,13 +66,13 @@ module ApplicationHelper
     if art.image.attached?
       image_tag(art.image)
     else
-      image_tag("https://source.unsplash.com/500x500/?{videogame},{#{art.title}}")
+      image_tag("https://source.unsplash.com/600x600/?{laptop},{#{art.title}}")
     end
   end
 
   def display_details(art)
     content_tag(:h1, @category.name, class: 'orange-text') + content_tag(:h2, art.title) +
-      content_tag(:p, simple_format(art.text.truncate(14_000))) +
+      content_tag(:p, simple_format(art.text.truncate(14000))) +
       content_tag(:span, "#{art.votes_count} votes - Your reaction: ") +
       content_tag(:span, nil, class: 'orange-links') do
         vote_toggle_btn(art)

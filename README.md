@@ -31,7 +31,7 @@ This project has the basic features of the article posting websites.
 
 - Ruby -v 2.6.6
 - Rails -v 5.2.4.4
-- Postgresql
+- PostgreSQL
 - VScode
 
 ## Getting Started
@@ -60,6 +60,11 @@ To get this project up and running locally, you must already have ruby and neces
 - Github: [@Abhigyan001](https://github.com/Abhigyan001)
 - Twitter: [@abhigyan_001](https://twitter.com/abhigyan_001)
 - LinkedIn: [Abhigyan](https://www.linkedin.com/in/abhigyan-mahanta-b49799145/)
+
+## Acknowledgements
+- [Microverse curriculum Rails section](https://www.microverse.org/?grsf=6ns691)
+- [Rails Guides](https://guides.rubyonrails.org)
+- Design acknowledge to [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
 ## Show your support
 
