@@ -17,7 +17,7 @@ class VotesController < ApplicationController
       redirect_back fallback_location: '/', alert: 'There was a problem, please try again.'
     end
   end
-  
+
   private
 
   def vote_params

@@ -72,7 +72,7 @@ module ApplicationHelper
 
   def display_details(art)
     content_tag(:h1, @category.name, class: 'orange-text') + content_tag(:h2, art.title) +
-      content_tag(:p, simple_format(art.text.truncate(14000))) +
+      content_tag(:p, simple_format(art.text.truncate(14_000))) +
       content_tag(:span, "#{art.votes_count} votes - Your reaction: ") +
       content_tag(:span, nil, class: 'orange-links') do
         vote_toggle_btn(art)
