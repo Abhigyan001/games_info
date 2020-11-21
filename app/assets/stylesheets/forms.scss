@@ -1,0 +1,49 @@
+
+.form-page {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+  border: 3px solid rgb(255, 60, 0);
+  width: 50%;
+  margin: 0 auto;
+
+  label {
+    color: #ff5a00;
+  }
+}
+
+.errors {
+  margin: 0 auto;
+  width: 35%;
+  justify-content: center;
+  background-color: #7cffff;
+  border-left: #ffa500 8px solid;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.circle-list {
+  list-style-type: circle;
+}
+
+.title {
+  width: 35rem;
+}
+
+select[multiple] {
+  margin-top: 0.5rem;
+  border: 2px solid orange;
+}
+
+.btn {
+  border: none;
+  background-color: #2aee10;
+  padding: 0.3rem 1rem;
+  box-shadow: 0 0 5px 2px rgba(240, 173, 173, 0.521);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #e0f339c2;
+}
