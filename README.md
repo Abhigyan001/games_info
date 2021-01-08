@@ -59,7 +59,7 @@ To get this project up and running locally, you must already have ruby and neces
 
 - Github: [@Abhigyan001](https://github.com/Abhigyan001)
 - Twitter: [@abhigyan_001](https://twitter.com/abhigyan_001)
-- LinkedIn: [Abhigyan](https://www.linkedin.com/in/abhigyan-mahanta-b49799145/)
+- LinkedIn: [Abhigyan](https://www.linkedin.com/in/abhigyanmahanta/)
 
 ## Acknowledgements
 - [Microverse curriculum Rails section](https://www.microverse.org/?grsf=6ns691)
